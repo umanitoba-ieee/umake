@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnovateHacks 2026 | Canada's Premier Hackathon</title>
+    <title>UMake</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body data-bg="var(--bg-hero)">
-
+    <canvas id="voxel-canvas"></canvas>
+    
     <nav>
         <a href="#" class="logo">UMake</a>
         <div class="nav-links">
@@ -24,9 +25,10 @@
     </nav>
 
     <section id="hero" class="bg-trigger" data-color="var(--bg-hero)">
+        <img src="./assets/umieee.webp" style="height: 1.5rem;">
+        <h1>UMake</h1>
+        <p class="hero-sub">Join engineers, makers, and designers for a 2-day hardware marathon at the University of Manitoba.</p>
         <span class="hero-tag">MARCH 6-7, 2026</span>
-        <h1>BUILD THE FUTURE.</h1>
-        <p class="hero-sub">Join 500+ makers, engineers, and designers for a 2-day hardware marathon.</p>
         <a href="#" class="cta-btn">Register</a>
     </section>
 
@@ -66,25 +68,26 @@
         <h2 class="section-title">FAQ</h2>
         <div class="faq-item">
             <div class="faq-question">Who can apply?</div>
-            <p class="text-dim">Any student currently enrolled in a post-secondary institution. We welcome beginners and veterans alike!</p>
+            <p class="text-dim">UMake is open to everyone! We welcome beginners and veterans alike!</p>
         </div>
         <div class="faq-item">
             <div class="faq-question">What if I don't have hardware?</div>
             <p class="text-dim">No problem! We have a dedicated hardware lab where you can sign out everything from Arduinos to 3D printers.</p>
         </div>
         <div class="faq-item">
-            <div class="faq-question">Is it free?</div>
-            <p class="text-dim">Yes! Admission, hardware rentals, food, and swag are all completely free for accepted hackers.</p>
+            <div class="faq-question">What is the registration fee?</div>
+            <p class="text-dim">Registration, hardware, and building materials are free of cost.
+                Those who are interested in pizza lunch on day 1 or day 2 we have to submit a $5 pizza fee.</p>
         </div>
     </section>
 
     <section id="sponsors" class="bg-trigger" data-color="var(--bg-footer)">
         <h2 class="section-title">Sponsors</h2>
-        <div class="grid" style="text-align: center; opacity: 0.5;">
-            <div class="card"><h3>LOGO 1</h3></div>
-            <div class="card"><h3>LOGO 2</h3></div>
-            <div class="card"><h3>LOGO 3</h3></div>
-            <div class="card"><h3>LOGO 4</h3></div>
+        <div class="grid" style="text-align: center;">
+            <div class="card"><img src="./assets/umieee.webp"></div>
+            <div class="card"><img src="./assets/eef.webp"></div>
+            <div class="card"><img src="./assets/icf.webp"></div>
+            <div class="card"><img src="./assets/digikey.webp"></div>
         </div>
     </section>
 
@@ -98,31 +101,15 @@
         </div>
     </footer>
 
-    <script>
-        /**
-         * Background Change on Scroll Logic
-         * Using Intersection Observer for high performance
-         */
-        const sections = document.querySelectorAll('.bg-trigger');
-        const body = document.body;
-
-        const options = {
-            root: null,
-            threshold: 0.4, // Changes when 40% of the section is visible
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const color = entry.target.getAttribute('data-color');
-                    body.style.backgroundColor = color;
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+    
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
     </script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
