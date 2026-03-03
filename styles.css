@@ -62,13 +62,28 @@ nav {
     font-style: normal;
     /* font-weight: 800; */
     font-size: 1.5rem;
+    letter-spacing: 0.125em;
     color: var(--accent-yellow);
     text-decoration: none;
     text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px  1px 0 #000,
-        1px  1px 0 #000;
+        -0em -0.125em 0 #000,
+        -0.125em -0.125em 0 #000,
+        -0.125em 0.125em 0 #000,
+
+        -0.125em 0em 0 #000,
+
+        0em 0.125em 0 #000,
+
+        0em 0.25em 0 #000,
+        0.125em 0.25em 0 #000,
+
+        0.25em 0em 0 #000,
+        0.25em 0.125em 0 #000,
+
+        0.125em -0em 0 #000,
+        0.125em -0.125em 0 #000,
+        0.125em 0.125em 0 #000
+    ;
 }
 
 .nav-links {
